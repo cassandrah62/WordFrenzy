@@ -27,7 +27,6 @@ def startgame():
     with open("word_list.txt", "r") as file:
         allText = file.read()
         words = list(map(str, allText.split()))
-        print(words)
         # get random word from text file
         word = ((random.choice(words)).upper())
         hidden_word = " ".join(word)
@@ -86,6 +85,7 @@ root.title('Word Game')
 root.tk.call('tk', 'scaling', 2.0)
 root.state("zoomed")
 root.configure(bg='#E6BEFF')
+root.resizable(FALSE,FALSE)
 
 #configure number of columns and rows
 root.columnconfigure(9, weight=4)
